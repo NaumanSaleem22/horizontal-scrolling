@@ -1,0 +1,6069 @@
+@font-face {
+  font-family: "Roobert";
+  src: url(/assets/fonts/Roobert-Font/Roobert-Regular/Roobert-Regular.ttf);
+}
+@font-face {
+  font-family: "trans";
+  src: url(/assets/fonts/Roobert-Font/Trans-Robotic/Eurostile.ttf);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roobert";
+  overflow-y: hidden;
+}
+
+main.desktop-website {
+  overflow-x: hidden;
+  display: flex;
+  position: relative;
+}
+
+main.mobile-website {
+  display: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  color: black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 99;
+}
+
+.logo-div img {
+  width: 100%;
+  max-width: 94px;
+}
+
+.banner-img-background {
+  width: 100%;
+  height: 100%;
+}
+.banner-img-background .video-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.banner-img-background .video-background video {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner-img-background .banner-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 128px;
+  line-height: 154px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-img-background .banner-title .text-ani {
+  position: absolute;
+  width: 100%;
+  left: 35%;
+  margin-left: -225px;
+  height: 40px;
+  top: 43%;
+  margin-top: -20px;
+}
+.banner-img-background .banner-title .text-ani p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+.banner-img-background .banner-title .text-ani p .word {
+  position: absolute;
+  opacity: 0;
+}
+.banner-img-background .banner-title .letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+.banner-img-background .banner-title .letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.banner-img-background .banner-title .letter.behind {
+  transform: rotateX(-90deg);
+}
+.banner-img-background .banner-title .letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-div {
+  position: fixed;
+  right: 48px;
+  top: 20px;
+  z-index: 99;
+}
+.menu-div .btn-menu-opened {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border: 0px solid black;
+  box-shadow: 0px 4px 32px rgba(6, 59, 64, 0.16);
+  border-radius: 15px;
+  margin-right: 7px;
+  margin-top: 18px;
+}
+.menu-div .desktop-menu-dots {
+  background-color: white;
+  box-shadow: 0px 4px 32px rgba(6, 59, 64, 0.16);
+  padding: 10px 13px;
+  transition: 0.4s ease-in-out all;
+}
+.menu-div .desktop-menu-dots .two-dots {
+  display: flex;
+  gap: 10px;
+}
+.menu-div .desktop-menu-dots .first-dot,
+.menu-div .desktop-menu-dots .second-dot,
+.menu-div .desktop-menu-dots .third-dot,
+.menu-div .desktop-menu-dots .fourth-dot {
+  background-color: #063B40;
+  padding: 2px;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transition: 0.2s ease-in-out all;
+}
+.menu-div .desktop-menu-dots:hover .first-dot {
+  transform: translateX(16px);
+  -webkit-animation: salam 0.4s forwards;
+          animation: salam 0.4s forwards;
+}
+.menu-div .desktop-menu-dots:hover .second-dot {
+  transform: translateX(-16px);
+  -webkit-animation: salam 0.4s forwards;
+          animation: salam 0.4s forwards;
+}
+.menu-div .desktop-menu-dots:hover .third-dot {
+  transform: translateX(16px);
+  -webkit-animation: salam 0.4s forwards;
+          animation: salam 0.4s forwards;
+}
+.menu-div .desktop-menu-dots:hover .fourth-dot {
+  transform: translateX(-16px);
+  -webkit-animation: salam 0.4s forwards;
+          animation: salam 0.4s forwards;
+}
+@-webkit-keyframes salam {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes salam {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-div #get-started-btn {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 4px;
+  padding: 12px 32px;
+  cursor: pointer;
+  position: absolute;
+  left: -216px;
+  top: 18px;
+  box-shadow: 0px 4px 32px rgba(6, 59, 64, 0.16);
+  width: 170px;
+  cursor: pointer;
+}
+.menu-div .button-gradient {
+  width: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+  background-image: #fff;
+  border: 2px solid #063B40;
+  background-image: linear-gradient(to bottom, #063B40 20%, #063B40 100%);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  transition: background 300ms ease-in-out;
+  color: #fff;
+}
+.menu-div .button-gradient:hover {
+  background-position: -200%;
+  transition: background 300ms ease-in-out;
+  color: #000;
+}
+
+.menu-opened-div {
+  position: fixed;
+  right: -100%;
+  height: 100%;
+  background-color: #063B40;
+  color: white;
+  z-index: 999;
+}
+.menu-opened-div .menu-topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 49px 0px 0px;
+}
+.menu-opened-div .menu-topbar .logo-div img {
+  max-width: 124px;
+}
+.menu-opened-div .btn-menu-closed {
+  margin-top: 37px;
+  background-color: #063B40;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.menu-opened-div .btn-menu-closed img {
+  max-width: 48px;
+}
+.menu-opened-div .menu-links-outer-div {
+  padding-left: 70px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: -40px;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul {
+  list-style-type: none;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 811px;
+  width: 100%;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li p {
+  padding: 0;
+  margin: 0;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: 0.2s all ease;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a:hover {
+  color: #19b48d;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul::after {
+  content: "";
+  position: absolute;
+  top: 220px;
+  left: 80px;
+  right: 0;
+  margin: 0 auto;
+  width: 1px;
+  height: 500px;
+  background-color: white;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden {
+  margin-top: 20px;
+  opacity: 0;
+  display: none;
+  transition: 0.3s all ease;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul {
+  list-style-type: none;
+  position: absolute;
+  right: 143px;
+  top: 180px;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul li {
+  margin-bottom: 88px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul li p {
+  padding: 0;
+  margin: 0;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul li a {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul li a:hover {
+  color: #19b48d;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul2 {
+  right: 331px;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul3 {
+  right: 265px;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul4 {
+  right: 304px;
+  top: 202px;
+}
+.menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul5 {
+  right: 464px;
+}
+.menu-opened-div .menu-links-outer-div .opacityclass {
+  opacity: 1;
+  display: block;
+}
+
+#regForm {
+  position: relative;
+}
+
+#regForm #emailDesktop {
+  max-width: 350px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #22BD96;
+  border-radius: 4px;
+  padding: 16px 24px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #063B40;
+}
+#regForm #emailDesktop::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+#regForm #emailDesktop:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+#regForm #emailDesktop::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+
+#regForm .input-box {
+  position: relative;
+}
+
+#textDeskMulti {
+  display: block;
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  padding: 5px;
+  margin-left: -232px;
+  font-size: 12px;
+}
+
+#regForm.invalid .input-box::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/invalid.png);
+  background-size: cover;
+}
+
+#regForm.valid .input-box::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/valid.png);
+  background-size: cover;
+}
+
+#regForm {
+  background-color: #FFFFFF;
+  font-family: "Roobert";
+  display: none;
+  width: 100%;
+  height: 100vh;
+  min-width: 300px;
+  z-index: 99999;
+  position: fixed;
+  /* Mark input boxes that gets an error on validation: */
+  /* Hide all steps by default: */
+  /* Make circles that indicate the steps of the form: */
+  /* Mark the steps that are finished and valid: */
+}
+#regForm .topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+#regForm .topbar .logo-topbar-tab img {
+  width: 100%;
+  height: 94px;
+  max-width: 94px;
+}
+#regForm .topbar .close-btn-topbar-tab {
+  padding-right: 55px;
+  padding-top: 37px;
+}
+#regForm .topbar .close-btn-topbar-tab button {
+  background: rgba(6, 59, 64, 0.25);
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+}
+#regForm .topbar .close-btn-topbar-tab button img {
+  max-width: 48px;
+}
+#regForm input.invalid {
+  background-color: #ffdddd !important;
+  outline: 1px solid red;
+}
+#regForm .tab {
+  display: none;
+}
+#regForm .tab .input-div {
+  text-align: center;
+  margin-bottom: 24px;
+}
+#regForm .tab .input-div input {
+  max-width: 350px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #22BD96;
+  border-radius: 4px;
+  padding: 16px 24px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #063B40;
+}
+#regForm .tab .input-div input::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+#regForm .tab .input-div input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+#regForm .tab .input-div input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+#regForm .tab .progress-bar-div {
+  width: 100%;
+  max-width: 1000px;
+  height: 16px;
+  margin: 0 auto;
+  background-color: #D9D9D9;
+  border-radius: 50px;
+  position: relative;
+}
+#regForm .tab .progress-bar-div .progress-inner-div {
+  background-color: #22BD96;
+  max-width: 200px;
+  height: 16px;
+  border-radius: 50px 0px 0px 50px;
+}
+#regForm .tab .progress-bar-div .progress-inner-div-2 {
+  background-color: #22BD96;
+  max-width: 400px;
+  height: 16px;
+  border-radius: 50px 0px 0px 50px;
+}
+#regForm .tab .progress-bar-div .progress-inner-div-3 {
+  background-color: #22BD96;
+  max-width: 600px;
+  height: 16px;
+  border-radius: 50px 0px 0px 50px;
+}
+#regForm .tab .progress-bar-div .progress-inner-div-4 {
+  background-color: #22BD96;
+  max-width: 800px;
+  height: 16px;
+  border-radius: 50px 0px 0px 50px;
+}
+#regForm .tab .progress-bar-div .progress-inner-div-5 {
+  background-color: #22BD96;
+  max-width: 1000px;
+  height: 16px;
+  border-radius: 50px 50px 50px 50px;
+}
+#regForm .tab .progress-bar-div .previous-btn {
+  position: absolute;
+  top: -10px;
+  left: -100px;
+}
+#regForm .tab .progress-bar-div .previous-btn button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#regForm .tab .tab-heading-div {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#regForm .tab .tab-heading-div .tab-heading {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  color: #042326;
+  text-align: center;
+}
+#regForm .tab .tab-heading-div .tab-heading .green-text {
+  color: #22BD96;
+}
+#regForm .tab .tab-select-btn-div {
+  margin-bottom: 24px;
+  text-align: center;
+}
+#regForm .tab .tab-select-btn-div button,
+#regForm .tab .tab-select-btn-div .btn-input {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #22BD96;
+  padding: 24px 72px;
+  background: #FFFFFF;
+  border: 1px solid #22BD96;
+  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+  outline: none;
+}
+#regForm .tab .tab-select-btn-div .next-btn {
+  border: none;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #042326;
+  background: #22BD96;
+  border-radius: 4px;
+  padding: 16px 24px;
+  outline: none;
+}
+#regForm .tab .bottom-image-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#regForm .tab .bottom-image-div img {
+  width: 100%;
+  height: 100%;
+  max-width: 470px;
+}
+#regForm button:hover {
+  opacity: 0.8;
+}
+#regForm #prevBtn {
+  background-color: #bbbbbb;
+}
+#regForm .step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  display: none;
+}
+#regForm .step.active {
+  opacity: 1;
+  display: none;
+}
+#regForm .step.finish {
+  background-color: #04AA6D;
+}
+
+.section-about-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-about-background .dv-left {
+  background-color: #063B40;
+  width: 75%;
+  height: 100%;
+}
+.section-about-background .dv-right {
+  background-color: #042326;
+  width: 25%;
+  height: 100%;
+}
+.section-about-background .dv-about-programme-left {
+  background-color: #042326;
+}
+.section-about-background .dv-about-programme-right {
+  background-color: #063B40;
+}
+.section-about-background .about-programme-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 97%;
+  justify-content: space-between;
+}
+.section-about-background .about-programme-div .about-programme-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 0px 50px;
+  position: relative;
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-programme-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 32px;
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-programme-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color: #2A1A46;
+  max-width: 776px;
+  width: 100%;
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-features-div {
+  display: flex;
+  gap: 42px;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card {
+  text-align: center;
+  max-width: 156px;
+  width: 100%;
+  transition: 0.2s ease all;
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card:hover {
+  transform: scale(1.05);
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card:hover .card-img {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 32px rgba(112, 39, 118, 0.08);
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #2A1A46;
+  margin-top: 24px;
+}
+.section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-img {
+  border-radius: 8px;
+  padding: 16px;
+}
+.section-about-background .about-programme-div .about-programme-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-about-background .about-programme-div .about-programme-content-div .pagination-about-programme {
+  background-color: #042326;
+}
+.section-about-background .about-programme-div .about-programme-img-div {
+  width: 100%;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+}
+.section-about-background .about-programme-div .about-programme-img-div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.section-how-it-works-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-how-it-works-background .dv-left {
+  background-color: #063B40;
+  width: 75%;
+  height: 100%;
+}
+.section-how-it-works-background .dv-right {
+  background-color: #042326;
+  width: 25%;
+  height: 100%;
+}
+.section-how-it-works-background .how-it-works-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  width: 97%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div {
+  max-width: 980px;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 158px;
+  padding-right: 145px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 0px 50px;
+  position: relative;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div ul li.how-it-works-text::marker {
+  color: #19b48d;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 32px;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content {
+  margin: 30px 0px;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content .feedback-ques-p {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #042326;
+  margin: 0 0 10px 0;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content .feedback-big-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 58px;
+  color: #063B40;
+  margin: 0;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content .feedback-big-text .green-text {
+  color: #063B40;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content .feedback-big-text .light-green-text {
+  color: #042326;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color: #2A1A46;
+  max-width: 776px;
+  width: 100%;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-img-div {
+  width: 100%;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+}
+.section-how-it-works-background .how-it-works-div .how-it-works-img-div img {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-course-features-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-course-features-background .dv-left {
+  background-color: #042326;
+  width: 75%;
+  height: 100%;
+}
+.section-course-features-background .dv-right {
+  background-color: #063B40;
+  width: 25%;
+  height: 100%;
+}
+.section-course-features-background .course-features-dv-left {
+  background-color: #063B40;
+}
+.section-course-features-background .course-features-dv-right {
+  background-color: #042326;
+}
+.section-course-features-background .course-features-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  width: 97%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.section-course-features-background .course-features-div .course-features-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 84px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 0px 50px;
+  position: relative;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 54px;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card {
+  max-width: 365px;
+  width: 100%;
+  transition: 0.2s ease all;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card:hover {
+  transform: scale(1.05);
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card:hover .course-features-card-img {
+  padding: 12px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 32px rgba(112, 39, 118, 0.08);
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-img {
+  padding: 16px;
+  border-radius: 8px;
+  transition: 0.2s ease all;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .nohassle-img {
+  max-width: 73px;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2A1A46;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #2A1A46;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-title.alt {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2A1A46;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-text.alt {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #2A1A46;
+}
+.section-course-features-background .course-features-div .course-features-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #042326;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-course-features-background .course-features-div .course-features-content-div .course-features-pagination {
+  background-color: #063B40;
+}
+.section-course-features-background .course-features-div .course-features-img-div {
+  width: 100%;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+}
+.section-course-features-background .course-features-div .course-features-img-div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-course-syllabus-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-course-syllabus-background .dv-left {
+  background-color: #063B40;
+  width: 75%;
+  height: 100%;
+}
+.section-course-syllabus-background .dv-right {
+  background-color: #042326;
+  width: 25%;
+  height: 100%;
+}
+.section-course-syllabus-background .course-syllabus-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  width: 97%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 74px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  opacity: 1;
+}
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 54px;
+}
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs {
+  display: flex;
+  align-items: flex-end;
+  gap: 48px;
+}
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs .course-syllabus-card {
+  background: #FFFFFF;
+  border: 4px solid #063B40;
+  box-shadow: 0px 4px 24px rgba(4, 35, 38, 0.16);
+  border-radius: 25px;
+  max-width: 480px;
+  width: 100%;
+  padding: 30px 20px;
+}
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs .course-syllabus-card ul li {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #042326;
+}
+
+.section-course-schedule-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-course-schedule-background .dv-left {
+  background-color: #042326;
+  width: 75%;
+  height: 100%;
+}
+.section-course-schedule-background .dv-right {
+  background-color: #063B40;
+  width: 25%;
+  height: 100%;
+}
+.section-course-schedule-background .course-schedule-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 97%;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 72px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  opacity: 1;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 54px;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #042326;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: -167px;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .margin-custom-bottom {
+  margin-bottom: 20px;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .dark-card {
+  background: #063B40 !important;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .custom-margin-top {
+  margin-top: 250px;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card {
+  background: #042326;
+  padding: 24px 24px 0px;
+  max-width: 328px;
+  height: 328px;
+  width: 100%;
+  box-shadow: 0px 6px 18px 0px rgba(183, 177, 177, 0.4509803922);
+  transition: 0.2s ease all;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card:hover {
+  transform: scale(1.05);
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card .color-black {
+  color: #042326;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card .color-white {
+  color: #FFFFFF !important;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card .schedule-card-heading {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 0px;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card .schedule-card-subtext {
+  color: #FFFFFF;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0;
+}
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card ul li {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.section-faqs-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-faqs-background .dv-left {
+  background-color: #042326;
+  width: 75%;
+  height: 100%;
+}
+.section-faqs-background .dv-right {
+  background-color: #063B40;
+  width: 25%;
+  height: 100%;
+}
+.section-faqs-background .faq-dv-left {
+  background-color: #063B40;
+}
+.section-faqs-background .faq-dv-right {
+  background-color: #042326;
+}
+.section-faqs-background .faqs-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 97%;
+}
+.section-faqs-background .faqs-div .faqs-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 84px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 0px 50px;
+  position: relative;
+  opacity: 1;
+}
+.section-faqs-background .faqs-div .faqs-content-div ul li.faqs-text::marker {
+  color: #19b48d;
+}
+.section-faqs-background .faqs-div .faqs-content-div .faqs-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 32px;
+}
+.section-faqs-background .faqs-div .faqs-content-div .question-answer-div {
+  margin-bottom: 40px;
+}
+.section-faqs-background .faqs-div .faqs-content-div .question-answer-div .question-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #042326;
+  display: flex;
+  margin-bottom: 15px;
+}
+.section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042326;
+  display: flex;
+}
+.section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-ul {
+  padding-left: 66px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042326;
+}
+.section-faqs-background .faqs-div .faqs-content-div .question-answer-div .prefix-qa {
+  font-size: 20px;
+  color: #063B40;
+  font-weight: 400;
+  padding-right: 16px;
+}
+.section-faqs-background .faqs-div .faqs-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #042326;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-faqs-background .faqs-div .faqs-content-div .faq-pagination {
+  background-color: #063B40;
+}
+.section-faqs-background .faqs-div .faqs-img-div {
+  width: 100%;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+}
+.section-faqs-background .faqs-div .faqs-img-div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-developing-skills-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-developing-skills-background .dv-left {
+  background-color: #063B40;
+  width: 75%;
+  height: 100%;
+}
+.section-developing-skills-background .dv-right {
+  background-color: #042326;
+  width: 25%;
+  height: 100%;
+}
+.section-developing-skills-background .dv-why-stem-left {
+  background-color: #042326;
+}
+.section-developing-skills-background .dv-why-stem-right {
+  background-color: #063B40;
+}
+.section-developing-skills-background .developing-skills-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 97%;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 72px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  opacity: 1;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 54px;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .our-story-title {
+  margin-bottom: 0px !important;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .why-stem-pagination {
+  background-color: #042326;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-inner-content-div .developing-skills-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #042326;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-inner-content-div .content-img {
+  max-width: 680px;
+  width: 100%;
+}
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-inner-content-div .content-img img {
+  width: 100%;
+}
+
+.section-testimonial1-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-testimonial1-background .slick-track {
+  display: flex !important;
+}
+.section-testimonial1-background .slick-slide {
+  height: inherit !important;
+}
+.section-testimonial1-background .slick-dots {
+  bottom: -45px;
+}
+.section-testimonial1-background .slide-arrow.prev-arrow {
+  position: absolute;
+  left: -79px;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.section-testimonial1-background .slide-arrow.next-arrow {
+  position: absolute;
+  right: -79px;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.section-testimonial1-background .dv-left {
+  background-color: #042326;
+  width: 75%;
+  height: 100%;
+}
+.section-testimonial1-background .dv-left-testimonial-2 {
+  background-color: #063B40;
+  width: 75%;
+  height: 100%;
+}
+.section-testimonial1-background .dv-right {
+  background-color: #063B40;
+  width: 25%;
+  height: 100%;
+}
+.section-testimonial1-background .dv-right-testimonial-2 {
+  background-color: #042326;
+  width: 25%;
+  height: 100%;
+}
+.section-testimonial1-background .testimonial1-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 97%;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 86px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  opacity: 1;
+  max-width: 87%;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 34px;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-text-p {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #042326;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #042326;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .pagination-btn-testimonial-2 {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .card-outer-div {
+  margin-top: 90px !important;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div {
+  display: flex;
+  gap: 20px;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .card-div {
+  border: 2px solid rgba(61, 98, 102, 0.7176470588);
+  border-radius: 6px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px 20px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #042326;
+  transition: 0.2s ease all;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .card-div:hover {
+  transform: scale(1.05);
+  box-shadow: -1px 6px 10px 7px rgba(0, 0, 0, 0.21);
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .testimonial {
+  background-image: url("./assets/images/testimonial-rectangle.png");
+  height: 100%;
+  width: 100%;
+  max-width: 510px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 40px 30px 91px 30px;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .testimonial .testimonial1-quote {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #042326;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .testimonial .testimonial1-name {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #042326;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .click-to-download-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #3D6266;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .click-to-download-div a {
+  font-size: 16px;
+  color: #042326;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card {
+  background: #FFFFFF;
+  border: 4px solid #063B40;
+  border-radius: 25px;
+  width: 100%;
+  padding: 30px 40px;
+  margin: 0 10px;
+  position: relative;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card .testimonial1-quote {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042326;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
+}
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card .testimonial1-name {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #042326;
+}
+
+.section-students-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-students-background .dv-left {
+  background-color: #063B40;
+  width: 75%;
+  height: 100%;
+}
+.section-students-background .dv-left-alt {
+  background-color: #042326;
+  width: 75%;
+  height: 100%;
+}
+.section-students-background .dv-right {
+  background-color: #042326;
+  width: 25%;
+  height: 100%;
+}
+.section-students-background .dv-right-alt {
+  background-color: #063B40;
+  width: 25%;
+  height: 100%;
+}
+.section-students-background .students-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 97%;
+}
+.section-students-background .students-div .students-content-div {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 70px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  opacity: 1;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new .slide-arrow.prev-arrow {
+  position: absolute;
+  left: -79px;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new .slide-arrow.next-arrow {
+  position: absolute;
+  right: -79px;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.section-students-background .students-div .students-content-div .students-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 54px;
+}
+.section-students-background .students-div .students-content-div .students-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #042326;
+}
+.section-students-background .students-div .students-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-students-background .students-div .students-content-div .pagination-btn-alt {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #042326;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new {
+  max-width: 1440px;
+  width: 100%;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs a {
+  padding: 0px 15px 10px 0px;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs a img {
+  max-width: 180px;
+  width: 100%;
+}
+.section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs a img:hover {
+  background-color: #f7b0ae;
+  filter: invert(1);
+}
+
+.section-get-in-touch-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section-get-in-touch-background .dv-left {
+  background-color: #042326;
+  width: 75%;
+  height: 100%;
+}
+.section-get-in-touch-background .dv-right {
+  background-color: #063B40;
+  width: 25%;
+  height: 100%;
+}
+.section-get-in-touch-background .get-in-touch-div {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  height: 95%;
+  overflow: hidden;
+  width: 100%;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div {
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 84px;
+  padding-bottom: 85px;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 90px;
+  padding-top: 100px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .getintouch-content {
+  width: 50%;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div {
+  width: 50%;
+  margin-top: 120px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form {
+  position: relative;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form #email {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #063B40;
+  border-radius: 4px;
+  padding: 14px 24px;
+  max-width: 311px;
+  background-color: transparent !important;
+  color: #063B40;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form #email::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form #email:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form #email::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form .input-box {
+  position: relative;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #text {
+  display: block;
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  position: absolute;
+  font-size: 12px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form.invalid .input-box::before {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 13px;
+  width: 24px;
+  height: 24px;
+  background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/invalid.png);
+  background-size: cover;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form.valid .input-box::before {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 13px;
+  width: 24px;
+  height: 24px;
+  background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/valid.png);
+  background-size: cover;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #063B40;
+  border-radius: 4px;
+  padding: 14px 24px;
+  max-width: 311px;
+  color: #063B40;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div {
+  margin-bottom: 16px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  width: 90%;
+  outline: none;
+  border: 1px solid #063B40;
+  border-radius: 4px;
+  padding: 14px 24px;
+  color: #063B40;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888888;
+  opacity: 1;
+  /* Firefox */
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div textarea {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #063B40;
+  width: 90%;
+  outline: none;
+  border: 1px solid #063B40;
+  border-radius: 4px;
+  padding: 14px 24px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div .submit-btn {
+  background-color: #042326;
+  max-width: 200px;
+  padding: 12px 12px;
+  border-radius: 7px;
+  border: 0px solid black;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 77px;
+  color: #042326;
+  margin-bottom: 54px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #042326;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div {
+  margin-top: 25px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div .contact-icon-inner-div {
+  margin-bottom: 35px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div .contact-icon-inner-div .contact-text-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #042326;
+  text-decoration: none;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .pagination-btn {
+  position: absolute;
+  top: 95px;
+  left: -1px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-color: #042326;
+  padding: 24px 32px;
+  border-radius: 0px 25px 25px 0px;
+}
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-card-divs {
+  display: flex;
+  gap: 48px;
+}
+
+.last-section {
+  min-width: 10vw;
+  background-color: #063B40;
+}
+
+.happy-students-slick .green-content-div {
+  background: #22BA94;
+  border: 1px solid #042326;
+  border-radius: 500px;
+  max-width: 550px;
+  padding: 10px 75px;
+  color: #042326;
+}
+.happy-students-slick .green-content-div .text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+.happy-students-slick .white-content-div {
+  background: #FFFFFF;
+  border: 2px solid #042326;
+  border-radius: 500px;
+  max-width: 550px;
+  padding: 10px 75px;
+  color: #042326;
+}
+.happy-students-slick .white-content-div .text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#online-tuition-section {
+  position: relative;
+}
+#online-tuition-section .outer-students-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#online-tuition-section .outer-students-div .content-div {
+  max-width: 515px;
+}
+#online-tuition-section .outer-students-div .content-div .safe-and-secure-div .title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #042326;
+}
+#online-tuition-section .outer-students-div .content-div .safe-and-secure-div .secure-cards-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 24px;
+}
+#online-tuition-section .outer-students-div .content-div .safe-and-secure-div .secure-cards-card .card {
+  text-align: center;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #042326;
+  transition: 0.2s ease all;
+}
+#online-tuition-section .outer-students-div .content-div .safe-and-secure-div .secure-cards-card .card:hover {
+  transform: scale(1.1);
+}
+#online-tuition-section .outer-students-div .img-div {
+  max-width: 495px;
+}
+#online-tuition-section .outer-students-div .img-div .img-card {
+  padding: 20px;
+  max-width: 494px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 2px solid #063B40;
+  box-shadow: 0px 2px 8px rgba(4, 35, 38, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+#online-tuition-section .outer-students-div .img-div .img-card:hover {
+  transform: scale(1.05);
+}
+#online-tuition-section .outer-students-div .img-div .img-card .card-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #042326;
+  margin: 0;
+  margin-bottom: 16px;
+}
+#online-tuition-section .outer-students-div .img-div .img-card .card-text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #042326;
+  margin: 0;
+}
+#online-tuition-section .modal-group-tuition-div {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  background-color: rgba(6, 10, 7, 0.815);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition {
+  position: absolute;
+  width: 1360px;
+  height: 684px;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 4px solid #042326;
+  border-radius: 25px;
+  padding: 48px;
+  z-index: 990;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .modal-header .modal-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #042326;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .sub-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #063B40;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3D6266;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .group-tuition-outer-div {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .group-tuition-outer-div .group-tuition-card {
+  max-width: 246px;
+  text-align: center;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .group-tuition-outer-div .group-tuition-card .title-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #042326;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .purchase-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #042326;
+}
+#online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .purchase-btn {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 16px 48px;
+  border: none;
+  outline: none;
+  margin-top: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#online-tuition-section .modal-holiday-classes-div {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  background-color: rgba(6, 10, 7, 0.815);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes {
+  position: absolute;
+  width: 1360px;
+  height: 684px;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 4px solid #042326;
+  border-radius: 25px;
+  padding: 48px;
+  z-index: 990;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .modal-header .modal-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #042326;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .sub-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #063B40;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3D6266;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .group-tuition-outer-div {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .group-tuition-outer-div .group-tuition-card {
+  max-width: 246px;
+  text-align: center;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .group-tuition-outer-div .group-tuition-card .title-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #042326;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .holiday-classes-outer-div {
+  display: flex;
+  gap: 26px;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .holiday-classes-outer-div .holiday-classes-card {
+  max-width: 588px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .holiday-classes-outer-div .holiday-classes-card .title-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #042326;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .holiday-classes-outer-div .holiday-classes-card .text-div {
+  margin-top: 16px;
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3D6266;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .purchase-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #042326;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .purchase-btn {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 16px 48px;
+  border: none;
+  outline: none;
+  margin-top: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .purchase-btn-div {
+  display: flex;
+  gap: 24px;
+}
+#online-tuition-section .modal-one-on-one-div {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  background-color: rgba(6, 10, 7, 0.815);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition {
+  position: absolute;
+  width: 1360px;
+  height: 684px;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 4px solid #042326;
+  border-radius: 25px;
+  padding: 48px;
+  z-index: 990;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .modal-header .modal-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #042326;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .sub-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #063B40;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3D6266;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .group-tuition-outer-div {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .group-tuition-outer-div .group-tuition-card {
+  max-width: 246px;
+  text-align: center;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .group-tuition-outer-div .group-tuition-card .title-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #042326;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .purchase-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #042326;
+}
+#online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .purchase-btn {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 16px 48px;
+  border: none;
+  outline: none;
+  margin-top: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#online-tuition-section .modal-free-tuition-div {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  background-color: rgba(6, 10, 7, 0.815);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition {
+  position: absolute;
+  width: 1360px;
+  height: 684px;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 4px solid #042326;
+  border-radius: 25px;
+  padding: 48px;
+  z-index: 990;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .modal-header .modal-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #042326;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .sub-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #063B40;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .text {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3D6266;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .group-tuition-outer-div {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .group-tuition-outer-div .group-tuition-card {
+  max-width: 246px;
+  text-align: center;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .group-tuition-outer-div .group-tuition-card .title-div {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #042326;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .purchase-title {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #042326;
+}
+#online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .purchase-btn {
+  font-family: "Roobert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #063B40;
+  padding: 16px 48px;
+  border: none;
+  outline: none;
+  margin-top: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.meet-tutor-div {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+}
+.meet-tutor-div .content-div {
+  max-width: 700px !important;
+}
+.meet-tutor-div .img-div {
+  max-width: 595px !important;
+}
+.meet-tutor-div .meet-tutor-img {
+  width: 100%;
+}
+
+@media (max-width: 1600px) {
+  #online-tuition-section .outer-students-div .img-div .img-card img {
+    max-width: 100px;
+  }
+  #online-tuition-section .outer-students-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #online-tuition-section .outer-students-div .img-div {
+    margin-top: 10px;
+    max-width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+  #online-tuition-section .outer-students-div .content-div .safe-and-secure-div .secure-cards-card .card p {
+    margin: 5px 0;
+  }
+  #online-tuition-section .outer-students-div .content-div {
+    max-width: 800px;
+  }
+  #online-tuition-section .section-students-background .students-div .students-content-div .students-title {
+    margin-bottom: 0px;
+  }
+  .banner-img-background .banner-title {
+    font-size: 118px;
+  }
+  #regForm .topbar {
+    margin-bottom: 0px;
+  }
+  #regForm .tab .bottom-image-div img {
+    max-width: 396px;
+  }
+  #regForm .tab .input-div input {
+    padding: 12px 24px;
+  }
+  #regForm .tab .tab-heading-div .tab-heading {
+    font-size: 58px;
+    line-height: 66px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input {
+    max-width: 250px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div {
+    padding-top: 50px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-text-p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .testimonial1-card-divs.testimonials-slick {
+    padding-top: 50px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-programme-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .jaspal-singh-text {
+    font-size: 16px;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-programme-title {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .jaspal-singh-title {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div #form #email {
+    max-width: 247px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 0px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div {
+    padding-top: 64px;
+    max-width: 670px;
+    padding-right: 30px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div {
+    padding-top: 64px;
+    max-width: 602;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div {
+    padding-top: 64px;
+    max-width: 521px;
+    padding-right: 210px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs .course-syllabus-card {
+    padding: 20px 20px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs .course-syllabus-card ul li {
+    font-size: 14px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 0px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-top: 90px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+    max-width: 86%;
+    padding-right: 66px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-inner-content-div .developing-skills-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-inner-content-div .content-img img {
+    max-width: 366px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-img-div img {
+    max-width: 500px;
+  }
+  .section-students-background .students-div .students-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+    max-width: 86%;
+    padding-right: 66px;
+  }
+  .section-students-background .students-div .students-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-students-background .students-div .students-content-div .pagination-btn-alt {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-students-background .students-div .students-content-div .students-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .section-students-background .students-div .students-content-div .students-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs {
+    padding-top: 50px;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs img {
+    max-width: 137px;
+    width: 100%;
+    height: 100%;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 70px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div .contact-icon-inner-div {
+    margin-bottom: 20px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div .contact-icon-inner-div .contact-text-div {
+    font-size: 20px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input {
+    font-size: 20px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div {
+    padding-left: 150px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+    max-width: 85%;
+    padding-right: 80px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .pagination-btn,
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .pagination-btn-testimonial-2 {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card {
+    padding: 20px 30px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card img {
+    max-width: 110px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card .testimonial1-quote {
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card .testimonial1-name {
+    font-size: 18px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div {
+    padding-top: 64px;
+    padding-left: 150px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .faqs-title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 35px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div {
+    margin-bottom: 20px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .question-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .question-text .prefix-qa {
+    font-size: 17px;
+    padding-right: 10px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-text .prefix-qa {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-ul {
+    padding-left: 36px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div {
+    gap: 15px;
+    margin-top: 10px;
+    margin-left: -6px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div {
+    padding-right: 65px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+    padding-top: 64px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card .schedule-card-heading {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card .schedule-card-subtext {
+    font-size: 10px;
+    line-height: 17px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card {
+    max-width: 229px;
+    height: 254px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card ul li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .pagination-btn {
+    top: 55px;
+    font-size: 32px;
+    padding: 15px 32px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div {
+    padding-top: 0px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-title {
+    margin-top: 16px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div .quote-text {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div .quote-name {
+    font-size: 18px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div .quote-desg {
+    font-size: 14px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div .quote-place {
+    font-size: 14px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-img {
+    max-width: 50px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-title {
+    margin: 8px 0 0 0;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-text {
+    margin: 8px 0 0 0;
+    line-height: 24px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card {
+    max-width: 270px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .section-about-background .dv-left {
+    width: 68%;
+  }
+  .section-about-background .dv-right {
+    width: 32%;
+  }
+  .section-jaspal-singh-background .dv-left {
+    width: 68%;
+  }
+  .section-jaspal-singh-background .dv-right {
+    width: 32%;
+  }
+  .section-how-it-works-background .dv-left {
+    width: 68%;
+  }
+  .section-how-it-works-background .dv-right {
+    width: 32%;
+  }
+  .section-course-features-background .dv-left {
+    width: 68%;
+  }
+  .section-course-features-background .dv-right {
+    width: 32%;
+  }
+  .section-course-syllabus-background .dv-left {
+    width: 68%;
+  }
+  .section-course-syllabus-background .dv-right {
+    width: 32%;
+  }
+  .section-course-schedule-background .dv-left {
+    width: 68%;
+  }
+  .section-course-schedule-background .dv-right {
+    width: 32%;
+  }
+  .section-students-background .dv-right-alt {
+    width: 32%;
+  }
+  .section-students-background .dv-left-alt {
+    width: 68%;
+  }
+  .section-faqs-background .dv-left,
+.section-developing-skills-background .dv-left,
+.section-testimonial1-background .dv-left,
+.section-testimonial1-background .dv-left-testimonial-2,
+.section-students-background .dv-left,
+.section-get-in-touch-background .dv-left {
+    width: 68%;
+  }
+  .section-faqs-background .dv-right,
+.section-developing-skills-background .dv-right,
+.section-testimonial1-background .dv-right,
+.section-testimonial1-background .dv-right-testimonial-2,
+.section-students-background .dv-right,
+.section-get-in-touch-background .dv-right {
+    width: 32%;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div img {
+    max-width: 30px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li {
+    margin-bottom: 50px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul::after {
+    left: -32px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li {
+    max-width: 630px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul {
+    right: 43px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul2 {
+    right: 233px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul3 {
+    right: 136px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul4 {
+    right: 176px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul5 {
+    right: 353px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-img-div {
+    max-width: 648x;
+  }
+  .section-about-background .about-programme-div,
+.section-jaspal-singh-background .jaspal-singh-div,
+.section-how-it-works-background .how-it-works-div,
+.section-course-features-background .course-features-div,
+.section-course-syllabus-background .course-syllabus-div,
+.section-course-schedule-background .course-schedule-div,
+.section-faqs-background .faqs-div,
+.section-developing-skills-background .developing-skills-div,
+.section-testimonial1-background .testimonial1-div,
+.section-students-background .students-div,
+.section-get-in-touch-background .get-in-touch-div {
+    height: 95%;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .card-div {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1536px) {
+  .section-students-background .students-div .students-content-div .schools-slick-new .slide-arrow.next-arrow {
+    right: -32px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input {
+    max-width: 234px !important;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div .contact-icon-inner-div .contact-text-div {
+    font-size: 18px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input {
+    font-size: 18px;
+  }
+  .question-answer-div .question-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .question-answer-div .question-text .prefix-qa {
+    font-size: 17px;
+    padding-right: 10px;
+  }
+  .question-answer-div .answer-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .question-answer-div .answer-text .prefix-qa {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  .question-answer-div .answer-ul {
+    padding-left: 36px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div {
+    max-width: 670px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-img-div {
+    max-width: 628px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+    padding-right: 81px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+    max-width: 85%;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    max-width: 84%;
+  }
+  .section-students-background .students-div .students-content-div {
+    max-width: 85%;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content .feedback-ques-p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .feedback-content .feedback-big-text {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .section-course-features-background .course-features-div,
+.section-how-it-works-background .how-it-works-div,
+.section-faqs-background .faqs-div,
+.section-about-background .about-programme-div,
+.section-jaspal-singh-background .jaspal-singh-div {
+    width: 96%;
+  }
+}
+@media (max-width: 1440.99px) {
+  .section-students-background .students-div .students-content-div .schools-slick-new .slide-arrow.next-arrow {
+    right: -42px;
+  }
+  #online-tuition-section .modal-group-tuition-div .modal-group-tuition {
+    width: 1150px;
+    top: 20px;
+    height: 580px;
+  }
+  #online-tuition-section .modal-free-tuition-div .modal-group-tuition {
+    width: 1150px;
+    top: 20px;
+    height: 580px;
+  }
+  #online-tuition-section .modal-one-on-one-div .modal-group-tuition {
+    width: 1150px;
+    top: 20px;
+    height: 580px;
+  }
+  #online-tuition-section .modal-holiday-classes-div .modal-holiday-classes {
+    width: 1150px;
+    top: 20px;
+    height: 578px;
+  }
+  #online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .modal-header .modal-title {
+    margin-bottom: 0;
+  }
+  #online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .purchase-title {
+    line-height: 0px;
+  }
+  #online-tuition-section .modal-holiday-classes-div .modal-holiday-classes .modal-content .holiday-classes-outer-div .holiday-classes-card {
+    margin-bottom: 22px;
+  }
+  #online-tuition-section .modal-group-tuition-div .modal-group-tuition .modal-content .purchase-title {
+    line-height: 2px;
+  }
+  #online-tuition-section .modal-free-tuition-div .modal-group-tuition .modal-content .purchase-title {
+    line-height: 2px;
+  }
+  #online-tuition-section .modal-one-on-one-div .modal-group-tuition .modal-content .purchase-title {
+    line-height: 2px;
+  }
+  .section-students-background .students-div .students-content-div .students-card-divs {
+    padding-top: 0px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .card-outer-div {
+    margin-top: 50px !important;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial-card-students-outer-div .card-div {
+    font-size: 16px;
+  }
+  #regForm .tab .tab-select-btn-div button,
+#regForm .tab .tab-select-btn-div .btn-input {
+    padding: 15px 72px;
+  }
+  #regForm .tab .input-div {
+    margin-bottom: 16px;
+  }
+  #regForm .tab .bottom-image-div img {
+    max-width: 336px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input {
+    max-width: 215px !important;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul {
+    right: 6px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul2 {
+    right: 182px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul3 {
+    right: 85px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul4 {
+    right: 122px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul5 {
+    right: 285px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-title {
+    font-size: 18px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-title {
+    margin-bottom: 72px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card .course-features-card-text {
+    font-size: 14px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div .quote-text {
+    line-height: 18px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div {
+    padding-right: 154px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card {
+    max-width: 259px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs {
+    margin-top: 20px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+    max-width: 83%;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div {
+    margin-top: -24px;
+    margin-left: -78px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card ul {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    padding-left: 16px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div {
+    max-width: 84%;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div {
+    padding-right: 10px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+    max-width: 84%;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    max-width: 83%;
+    padding-right: 76px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card .testimonial1-name {
+    margin: 0;
+  }
+  .testimonial1-card-divs.testimonials-slick {
+    padding-top: 5px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card {
+    padding: 20px 20px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs {
+    display: flex;
+    gap: 20px;
+  }
+  .section-students-background .students-div .students-content-div {
+    max-width: 84%;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs img {
+    max-width: 122px;
+    height: 100%;
+    width: 100%;
+  }
+  #regForm .topbar .logo-topbar-tab img {
+    max-width: 80px;
+    height: 80px;
+  }
+  #regForm .topbar .close-btn-topbar-tab {
+    padding-right: 30px;
+    padding-top: 23px;
+  }
+  #regForm .topbar {
+    margin-bottom: 30px;
+  }
+  .banner-img-background .banner-title {
+    font-size: 112px;
+    line-height: 154px;
+  }
+  .section-course-features-background .course-features-div,
+.section-how-it-works-background .how-it-works-div,
+.section-faqs-background .faqs-div,
+.section-about-background .about-programme-div,
+.section-jaspal-singh-background .jaspal-singh-div {
+    width: 96%;
+  }
+}
+@media (max-width: 1366.99px) {
+  .section-students-background .students-div .students-content-div {
+    max-width: 87%;
+    padding-right: 10px;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .slide-arrow.next-arrow {
+    right: -2px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input {
+    max-width: 201px !important;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs a img {
+    max-width: 163px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    max-width: 82%;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-card-divs .testimonial1-card .testimonial1-quote {
+    line-height: 22px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-text {
+    line-height: 26px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card {
+    max-width: 231px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+    max-width: 82%;
+    padding-right: 72px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs ul {
+    padding-left: 10px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div {
+    max-width: 83%;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .question-text {
+    font-size: 14px;
+    margin: 6px 0px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-text {
+    font-size: 14px;
+    margin: 0;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .question-answer-div .answer-ul {
+    font-size: 13px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+    max-width: 83%;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div .developing-skills-img-div video {
+    max-width: 522px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .contact-icon-outer-div .contact-icon-inner-div .contact-text-div {
+    font-size: 16px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div input {
+    font-size: 16px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .get-in-touch-input-div .submit-btn {
+    max-width: 166px;
+    padding: 12px 12px;
+    font-size: 18px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div {
+    padding-right: 81px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div {
+    gap: 20px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-img {
+    padding: 8px;
+  }
+  .menu-opened-div .menu-links-outer-div {
+    padding-left: 16px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul::after {
+    top: 146px;
+    left: 53px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul {
+    right: 4px;
+    top: 150px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul2 {
+    right: 144px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul3 {
+    right: 83px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul4 {
+    right: 105px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul5 {
+    right: 250px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a {
+    line-height: 36px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-hidden .menu-links-main-ul li a {
+    font-size: 26px;
+    line-height: 17px;
+  }
+  #regForm .tab .bottom-image-div img {
+    max-width: 248px;
+  }
+  #regForm .tab .tab-heading-div .tab-heading {
+    font-size: 50px;
+    line-height: 66px;
+  }
+  #online-tuition-section .outer-students-div .content-div .safe-and-secure-div .secure-cards-card .card img {
+    max-width: 38px;
+  }
+}
+@media (max-width: 1280.99px) {
+  #online-tuition-section .outer-students-div .content-div .safe-and-secure-div .secure-cards-card .card img {
+    max-width: 28px;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .slide-arrow.next-arrow {
+    right: -22px;
+  }
+  .section-students-background .students-div .students-content-div .schools-slick-new .students-card-divs {
+    padding-top: 6px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a {
+    line-height: 33px;
+    font-size: 28px;
+  }
+  #online-tuition-section .outer-students-div .img-div .img-card {
+    padding: 12px;
+  }
+  .section-students-background .students-div .students-content-div .students-card-divs a img {
+    max-width: 138px;
+  }
+  .section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-form-div .get-in-touch-form .double-input-div .get-in-touch-input-double-div input {
+    max-width: 183px !important;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-title {
+    margin-bottom: 35px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div {
+    gap: 24px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div {
+    padding-left: 110px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-features-div .about-features-card .card-img {
+    padding: 8px;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-programme-text {
+    line-height: 25px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-img-div {
+    max-width: 429px;
+  }
+  .section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .quote-div {
+    padding: 17px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-text {
+    line-height: 23px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div .course-features-card-outer-div .course-features-card {
+    max-width: 220px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+    max-width: 913px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-card-divs {
+    margin-left: -62px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div {
+    margin-top: -102px;
+    margin-left: -118px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+    padding-left: 141px;
+  }
+  .section-students-background .students-div .students-content-div {
+    padding-left: 140px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div {
+    padding-left: 138px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div {
+    padding-left: 138px;
+    padding-right: 84px;
+    max-width: 81%;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    padding-left: 131px;
+  }
+  .section-course-features-background .course-features-div .course-features-content-div {
+    padding-left: 140px;
+  }
+  .section .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    padding-left: 132px;
+  }
+  .section-testimonial1-background .testimonial1-div .testimonial1-content-div {
+    max-width: 81%;
+    padding-right: 91px;
+  }
+  .section-students-background .students-div .students-content-div .students-card-divs img {
+    max-width: 125px;
+  }
+  .banner-img-background .banner-title {
+    font-size: 105px;
+  }
+  .section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-cards-div .course-schedule-card {
+    max-width: 213px;
+    height: 254px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-outer-div {
+    padding-top: 0px;
+  }
+  .section-developing-skills-background .developing-skills-div .developing-skills-content-div {
+    max-width: 82%;
+  }
+  .section-about-background .about-programme-div .about-programme-content-div .about-programme-title,
+.section-jaspal-singh-background .jaspal-singh-div .jaspal-singh-content-div .jaspal-singh-title,
+.section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-title,
+.section-course-features-background .course-features-div .course-features-content-div .course-features-title,
+.section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div .course-syllabus-title,
+.section-course-schedule-background .course-schedule-div .course-schedule-content-div .course-schedule-title,
+.section-testimonial1-background .testimonial1-div .testimonial1-content-div .testimonial1-title,
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-title .section-faqs-background .faqs-div .faqs-content-div .faqs-title,
+.section-developing-skills-background .developing-skills-div .developing-skills-content-div .developing-skills-title,
+.section-students-background .students-div .students-content-div .students-title,
+.section-get-in-touch-background .get-in-touch-div .get-in-touch-content-div .get-in-touch-title {
+    font-size: 38px;
+  }
+  .section-faqs-background .faqs-div .faqs-content-div .faqs-title {
+    font-size: 38px;
+    line-height: 36px;
+    margin-bottom: 25px;
+  }
+  .section-how-it-works-background .how-it-works-div .how-it-works-content-div .how-it-works-title {
+    line-height: 38px;
+  }
+  .section-course-syllabus-background .course-syllabus-div .course-syllabus-content-div {
+    max-width: 81%;
+  }
+}
+.fadeUp-animation {
+  -webkit-animation: fadeUp 2s forwards;
+          animation: fadeUp 2s forwards;
+}
+
+.fadeDown-animation {
+  -webkit-animation: fadeDown 2.5s forwards;
+          animation: fadeDown 2.5s forwards;
+}
+
+.fadeRight-animation {
+  -webkit-animation: fadeRight 2s forwards;
+          animation: fadeRight 2s forwards;
+}
+
+.fadeLeft-animation {
+  -webkit-animation: fadeLeft 2s forwards;
+          animation: fadeLeft 2s forwards;
+}
+
+.fadeIn-animation {
+  -webkit-animation: fadeIn 2s forwards;
+          animation: fadeIn 2s forwards;
+}
+
+.fadeFromUp-animation {
+  -webkit-animation: fadeFromUp 2s forwards;
+          animation: fadeFromUp 2s forwards;
+}
+
+.scaleUp-animation {
+  -webkit-animation: scaleUp 1.75s forwards;
+          animation: scaleUp 1.75s forwards;
+}
+
+.flytextDown-animation {
+  -webkit-animation: flytextDown 0.65s forwards;
+          animation: flytextDown 0.65s forwards;
+}
+
+.flyheadingDown-animation {
+  -webkit-animation: flyheadingDown 1.75s forwards;
+          animation: flyheadingDown 1.75s forwards;
+}
+
+@-webkit-keyframes flytextDown {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes flytextDown {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flyheadingDown {
+  0% {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes flyheadingDown {
+  0% {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeUp {
+  from {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  from {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeDown {
+  0% {
+    margin-top: -200px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    margin-top: -200px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+@-webkit-keyframes fadeRight {
+  0% {
+    margin-right: 600px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes fadeRight {
+  0% {
+    margin-right: 600px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeLeft {
+  from {
+    margin-left: 100px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes fadeLeft {
+  from {
+    margin-left: 100px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeFromUp {
+  from {
+    opacity: 0;
+    top: -1000px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes fadeFromUp {
+  from {
+    opacity: 0;
+    top: -1000px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@-webkit-keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Our target, hidden by default */
+#target {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 150vh;
+  margin-top: 150vh;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+  width: 200px;
+}
+
+/* Apply this class when #target enters/leaves the viewport */
+#target.target-is-active {
+  opacity: 1;
+  transform: none;
+}
+
+.mobile-website {
+  display: none;
+}
+
+@media (max-width: 1024.99px) {
+  #regForm {
+    display: none;
+  }
+  @font-face {
+    font-family: "Roobert";
+    src: url(/assets/fonts/Roobert-Font/Roobert-Regular/Roobert-Regular.ttf);
+  }
+  html {
+    overflow-y: scroll;
+  }
+  body {
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow-y: scroll;
+  }
+  section {
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  main.mobile-website {
+    display: block;
+  }
+  main.desktop-website {
+    display: none;
+  }
+  #regForm2 {
+    position: relative;
+  }
+  #regForm2 #emailMobile {
+    max-width: 250px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #22BD96;
+    border-radius: 4px;
+    padding: 16px 24px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    outline: none;
+    color: #063B40;
+  }
+  #regForm2 #emailMobile::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  #regForm2 #emailMobile:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  #regForm2 #emailMobile::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  #regForm2 .input-box {
+    position: relative;
+  }
+  #textMobMulti {
+    display: block;
+    color: #000;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px;
+    margin-left: -127px;
+    font-size: 12px;
+  }
+  #regForm2.invalid .input-box::before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/invalid.png);
+    background-size: cover;
+  }
+  #regForm2.valid .input-box::before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/valid.png);
+    background-size: cover;
+  }
+  #regForm2 {
+    background-color: #FFFFFF;
+    font-family: "Roobert";
+    display: none;
+    width: 100%;
+    height: 100vh;
+    min-width: 300px;
+    z-index: 99999;
+    position: fixed;
+    /* Mark input boxes that gets an error on validation: */
+    /* Hide all steps by default: */
+    /* Make circles that indicate the steps of the form: */
+    /* Mark the steps that are finished and valid: */
+  }
+  #regForm2 .topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+  #regForm2 .topbar .logo-topbar-tab img {
+    width: 100%;
+    height: 100%;
+    max-width: 72px;
+    height: 72px;
+  }
+  #regForm2 .topbar .close-btn-topbar-tab {
+    padding-right: 24px;
+    padding-top: 24px;
+  }
+  #regForm2 .topbar .close-btn-topbar-tab button {
+    background: rgba(6, 59, 64, 0.25);
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+  }
+  #regForm2 .topbar .close-btn-topbar-tab button img {
+    max-width: 48px;
+  }
+  #regForm2 input.invalid {
+    background-color: #ffdddd !important;
+    outline: 1px solid red;
+  }
+  #regForm2 .tab2 {
+    display: none;
+  }
+  #regForm2 .tab2 .input-div {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  #regForm2 .tab2 .input-div input {
+    max-width: 250px;
+    min-width: 250px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #22BD96;
+    border-radius: 4px;
+    padding: 16px 24px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    outline: none;
+    color: #063B40;
+  }
+  #regForm2 .tab2 .input-div input::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  #regForm2 .tab2 .input-div input:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  #regForm2 .tab2 .input-div input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  #regForm2 .tab2 .progress-bar-div {
+    width: 100%;
+    max-width: 300px;
+    height: 16px;
+    margin: 0 auto;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    position: relative;
+  }
+  #regForm2 .tab2 .progress-bar-div .progress-inner-div {
+    background-color: #22BD96;
+    max-width: 60px;
+    height: 16px;
+    border-radius: 50px 0px 0px 50px;
+  }
+  #regForm2 .tab2 .progress-bar-div .progress-inner-div-2 {
+    background-color: #22BD96;
+    max-width: 120px;
+    height: 16px;
+    border-radius: 50px 0px 0px 50px;
+  }
+  #regForm2 .tab2 .progress-bar-div .progress-inner-div-3 {
+    background-color: #22BD96;
+    max-width: 180px;
+    height: 16px;
+    border-radius: 50px 0px 0px 50px;
+  }
+  #regForm2 .tab2 .progress-bar-div .progress-inner-div-4 {
+    background-color: #22BD96;
+    max-width: 240px;
+    height: 16px;
+    border-radius: 50px 0px 0px 50px;
+  }
+  #regForm2 .tab2 .progress-bar-div .progress-inner-div-5 {
+    background-color: #22BD96;
+    max-width: 300px;
+    height: 16px;
+    border-radius: 50px 50px 50px 50px;
+  }
+  #regForm2 .tab2 .progress-bar-div .previous-btn {
+    position: absolute;
+    top: -10px;
+    left: -45px;
+  }
+  #regForm2 .tab2 .progress-bar-div .previous-btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #regForm2 .tab2 .tab-heading-div {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #regForm2 .tab2 .tab-heading-div .tab-heading {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    color: #042326;
+    text-align: center;
+  }
+  #regForm2 .tab2 .tab-heading-div .tab-heading .green-text {
+    color: #22BD96;
+  }
+  #regForm2 .tab2 .tab-select-btn-div {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  #regForm2 .tab2 .tab-select-btn-div button,
+#regForm2 .tab2 .tab-select-btn-div .btn-input {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #22BD96;
+    padding: 16px 72px;
+    background: #FFFFFF;
+    border: 1px solid #22BD96;
+    border-radius: 4px;
+    max-width: 300px;
+    width: 100%;
+    outline: none;
+  }
+  #regForm2 .tab2 .tab-select-btn-div .next-btn {
+    border: none;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #042326;
+    background: #22BD96;
+    border-radius: 4px;
+    padding: 16px 24px;
+    outline: none;
+  }
+  #regForm2 .tab2 .bottom-image-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  #regForm2 .tab2 .bottom-image-div img {
+    width: 100%;
+    height: 100%;
+    max-width: 470px;
+  }
+  #regForm2 button:hover {
+    opacity: 0.8;
+  }
+  #regForm2 #prevBtn2 {
+    background-color: #bbbbbb;
+  }
+  #regForm2 .step2 {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    display: none;
+  }
+  #regForm2 .step2.active {
+    opacity: 1;
+    display: none;
+  }
+  #regForm2 .step2.finish {
+    background-color: #04AA6D;
+  }
+  .logo-mbl-div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+  }
+  .logo-mbl-div img {
+    max-width: 170px;
+    width: 100%;
+  }
+  .logo-div img {
+    max-width: 72px;
+  }
+  .menu-div {
+    position: fixed;
+    right: 20px;
+    top: 23px;
+    z-index: 99;
+  }
+  .menu-div .btn-menu-opened {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    border: 0px solid black;
+    box-shadow: 0px 4px 32px rgba(6, 59, 64, 0.16);
+    border-radius: 15px;
+    margin-right: 7px;
+    margin-top: 0;
+  }
+  .menu-div .btn-menu-opened img {
+    max-width: 48px;
+  }
+  .menu-opened-div {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #063B40;
+    color: white;
+    z-index: 999;
+  }
+  .menu-opened-div .menu-topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 28px 0px 0px;
+  }
+  .menu-opened-div .btn-menu-closed {
+    margin-top: 22px;
+    background-color: #063B40;
+    border: none;
+    outline: none;
+    max-width: 59px;
+  }
+  .menu-opened-div .btn-menu-closed img {
+    max-width: 48px;
+  }
+  .menu-opened-div .menu-links-outer-div {
+    padding-left: 0px;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul {
+    list-style-type: none;
+    padding-left: 24px;
+    margin-top: -10px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li {
+    margin-bottom: 88px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li p {
+    padding: 0;
+    margin: 0;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: #FFFFFF;
+    transition: 0.2s all ease;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li a:hover {
+    color: #22BD96;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul li::after {
+    display: none;
+  }
+  .menu-opened-div .menu-links-outer-div .menu-links-main .menu-links-main-ul::after {
+    display: none;
+  }
+  .menu-opened-div .menu-links-outer-div .opacityclass {
+    opacity: 1;
+    display: block;
+  }
+  .mobile-banner-section {
+    position: relative;
+  }
+  .mobile-banner-section .video-background {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mobile-banner-section .video-background video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  .mobile-banner-section .mobile-banner-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 20px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .text-ani {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0%;
+    margin-top: -20px;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    text-transform: uppercase;
+    margin-left: -107px;
+    margin-top: -20px;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__alone {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: "Roobert";
+    color: white;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__words {
+    position: relative;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__words .change {
+    display: inline-block;
+    position: absolute;
+    padding-left: 10px;
+    opacity: 0;
+    -webkit-animation: changeword 9s linear infinite;
+            animation: changeword 9s linear infinite;
+    font-family: "Roobert";
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__words .change:nth-child(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__words .change:nth-child(2) {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__words .change:nth-child(3) {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+  }
+  .mobile-banner-section .mobile-banner-content .banner-title .positivity .positivity__words .change:nth-child(4) {
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+  }
+  @-webkit-keyframes changeword {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    30% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+  @keyframes changeword {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    30% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+  .mobile-banner-section h1 {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+  .mobile-banner-section button {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background-color: #063B40;
+    padding: 8px 16px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    letter-spacing: 2px;
+    margin-top: 24px;
+  }
+  .mobile-about-programme-section {
+    position: relative;
+    width: 100%;
+    color: white;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div {
+    background: #063B40;
+    padding: 32px 16px;
+    margin-top: -4px;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-section-text-light {
+    margin-top: 93px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-about-programme-cards-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-about-programme-cards-div .mobile-about-cards {
+    max-width: 140px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .mobile-about-programme-section .mobile-about-programme-content-div .mobile-about-programme-cards-div .mobile-about-cards p {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal {
+    background-color: white;
+    z-index: 99;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    width: 320px;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: -5px 6px 19px 15px rgba(0, 0, 0, 0.231372549);
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .close-btn-div {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .sub-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div {
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: black;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div .card {
+    max-width: 150px;
+    text-align: center;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div .card img {
+    max-width: 30px;
+    width: 100%;
+    height: 30px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div .card p {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .purchase-now {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .purchase-now button {
+    margin-top: 8px;
+    background-color: #063B40;
+    color: white;
+    border-radius: 4px;
+    padding: 7px 17px;
+    border: none;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div {
+    position: relative;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div .online-tuition-budgets-outer-div {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div .online-tuition-budgets-outer-div .card-div {
+    display: flex;
+    max-width: 350px;
+    width: 100%;
+    align-items: center;
+    border: 2px solid #3D6266;
+    border-radius: 6px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div .online-tuition-budgets-outer-div .card-div .img-div {
+    max-width: 100px;
+    width: 100%;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div .online-tuition-budgets-outer-div .card-div .img-div img {
+    width: 100%;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div .online-tuition-budgets-outer-div .card-div .content-div .title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000;
+    margin-bottom: 0;
+  }
+  .mobile-about-programme-section .mobile-about-programme-img-div .online-tuition-budgets-outer-div .card-div .content-div .text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000;
+    margin: 0;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div {
+    background-color: rgb(84, 84, 84);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    padding-top: 20px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal {
+    background-color: white;
+    z-index: 99;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    width: 320px;
+    height: 87%;
+    padding: 20px;
+    box-shadow: -5px 6px 19px 15px rgba(0, 0, 0, 0.231372549);
+    position: relative;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .close-btn-div {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .sub-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div {
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: black;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div .card {
+    max-width: 150px;
+    width: 100%;
+    text-align: center;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div .card img {
+    max-width: 30px;
+    width: 100%;
+    height: 30px;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .cards-outer-div .card p {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .purchase-now {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 20px 0;
+    color: #000;
+    width: 100%;
+  }
+  .mobile-about-programme-section .mbl-grp-tuition-modal-outer-div .mbl-grp-tuition-modal .purchase-now button {
+    margin-top: 10px;
+    background-color: #063B40;
+    color: white;
+    border-radius: 4px;
+    padding: 7px 17px;
+    border: none;
+    width: 100%;
+  }
+  .mobile-jaspal-singh-section {
+    position: relative;
+    width: 100%;
+    color: #3D6266;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-section-title-div .mobile-section-title sub {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-section-text-dark {
+    margin-top: 73px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #063B40;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-jaspal-singh-quote {
+    margin-top: 24px;
+    background: #FFFFFF;
+    border: 2px solid #063B40;
+    box-shadow: 0px 4px 32px rgba(34, 189, 150, 0.08);
+    border-radius: 25px;
+    padding: 16px;
+    color: #042326;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-jaspal-singh-quote .quote-text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #042326;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-jaspal-singh-quote .quote-name,
+.mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-jaspal-singh-quote .quote-desgn {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #063B40;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-content-div .mobile-jaspal-singh-quote .quote-place {
+    margin: 0;
+    margin-bottom: 4px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #063B40;
+  }
+  .mobile-jaspal-singh-section .mobile-jaspal-singh-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-how-it-works-section {
+    position: relative;
+    width: 100%;
+    color: #3D6266;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-content-div .mobile-section-text-dark {
+    margin-top: 73px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #063B40;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-content-div .mobile-section-text-dark ul li {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3D6266;
+    margin-bottom: 16px;
+  }
+  .mobile-how-it-works-section .mobile-how-it-works-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-course-features-section {
+    position: relative;
+    width: 100%;
+    color: white;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div {
+    background: #063B40;
+    padding: 32px 37px;
+    margin-top: -4px;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-course-features-card-div {
+    margin-top: 73px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-course-features-card-div .mobile-section-course-features-cards {
+    max-width: 343px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 42px;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-course-features-card-div .mobile-section-course-features-cards .card-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .mobile-course-features-section .mobile-course-features-content-div .mobile-section-course-features-card-div .mobile-section-course-features-cards .card-desc {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .mobile-course-features-section .mobile-course-features-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-master-class-syllabus-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div {
+    background: #ffffff;
+    padding: 32px 8px;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div {
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .slick-track {
+    display: flex !important;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .slick-slide {
+    height: inherit !important;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div ul.slick-dots {
+    bottom: -56px;
+    z-index: -1;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .slide-arrow.prev-arrow {
+    position: absolute;
+    bottom: -75px;
+    left: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .slide-arrow.next-arrow {
+    position: absolute;
+    bottom: -75px;
+    right: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .master-class-card {
+    background: #FFFFFF;
+    border: 2px solid #063B40;
+    border-radius: 25px;
+    padding: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .master-class-card .master-class-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #042326;
+    margin: 0;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .master-class-card .master-class-text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D6266;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .master-class-card .master-class-text ul {
+    padding-left: 30px;
+  }
+  .mobile-master-class-syllabus-section .mobile-master-class-syllabus-content-div .master-class-slider-div .master-class-card .master-class-text ul li {
+    margin-bottom: 10px;
+  }
+  .mobile-master-class-schedule-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div {
+    background: #ffffff;
+    padding: 32px 8px;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div {
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .slick-track {
+    display: flex !important;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .slick-slide {
+    height: inherit !important;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div ul.slick-dots {
+    bottom: -56px;
+    z-index: -1;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .slide-arrow.prev-arrow {
+    position: absolute;
+    bottom: -75px;
+    left: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .slide-arrow.next-arrow {
+    position: absolute;
+    bottom: -75px;
+    right: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .dark {
+    color: #042326;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .master-class-card {
+    background: #063B40;
+    padding: 24px 16px 40px 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .master-class-card .master-class-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .master-class-card .master-class-title sub {
+    font-size: 10px;
+  }
+  .mobile-master-class-schedule-section .mobile-master-class-schedule-content-div .master-class-slider-div .master-class-card .master-class-text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .mobile-student-testimonial-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div {
+    background: #ffffff;
+    padding: 32px 8px;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div {
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .slick-track {
+    display: flex !important;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .slick-slide {
+    height: inherit !important;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div ul.slick-dots {
+    display: none !important;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .slide-arrow.prev-arrow {
+    position: absolute;
+    bottom: -75px;
+    left: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    z-index: 2;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .slide-arrow.next-arrow {
+    position: absolute;
+    bottom: -75px;
+    right: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    z-index: 2;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .student-testimonial-card {
+    background: #FFFFFF;
+    border: 2px solid #063B40;
+    border-radius: 25px;
+    padding: 32px 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .student-testimonial-card .student-testimonial-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #042326;
+    margin: 0;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .student-testimonial-card .student-testimonial-text {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D6266;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .master-class-slider-div .student-testimonial-card .quote-name {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .mobile-student-testimonial-section .mobile-student-testimonial-content-div .pagingInfoStudent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 45px;
+    z-index: 0;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .mobile-feedback-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-feedback-ques-ans-div {
+    margin-top: 80px;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-feedback-ques-ans-div .feedback-ques {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #042326;
+    margin: 20px 0 16px 0;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-feedback-ques-ans-div .feedback-ans {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-feedback-ques-ans-div .feedback-ans .dark-green {
+    color: #063B40;
+  }
+  .mobile-feedback-section .mobile-feedback-content-div .mobile-feedback-ques-ans-div .feedback-ans .light-green {
+    color: #042326;
+  }
+  .mobile-feedback-section .mobile-feedback-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-faq-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-faq-section .mobile-faq-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-faq-section .mobile-faq-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-faq-section .mobile-faq-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-faq-section .mobile-faq-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-faq-section .mobile-faq-content-div .mobile-faq-ques-ans-div {
+    margin-top: 80px;
+  }
+  .mobile-faq-section .mobile-faq-content-div .mobile-faq-ques-ans-div .faq-ques {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #042326;
+    margin: 20px 0 16px 0;
+  }
+  .mobile-faq-section .mobile-faq-content-div .mobile-faq-ques-ans-div .faq-ans {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D6266;
+  }
+  .mobile-faq-section .mobile-faq-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-developing-skills-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-content-div .mobile-developing-skills-content {
+    margin-top: 80px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3D6266;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-green-img-div {
+    padding: 0 24px;
+    max-width: 340px;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-green-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-video-div {
+    padding: 40px 24px;
+  }
+  .mobile-developing-skills-section .mobile-developing-skills-video-div video {
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  .mobile-leader-testimonial-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div {
+    background: #ffffff;
+    padding: 32px 8px;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div {
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .slick-track {
+    display: flex !important;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .slick-slide {
+    height: inherit !important;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div ul.slick-dots {
+    bottom: -56px;
+    z-index: -1;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .slide-arrow.prev-arrow {
+    position: absolute;
+    bottom: -75px;
+    left: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .slide-arrow.next-arrow {
+    position: absolute;
+    bottom: -75px;
+    right: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .leader-testimonial-card {
+    background: #FFFFFF;
+    border: 2px solid #063B40;
+    border-radius: 25px;
+    padding: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .leader-testimonial-card .leader-testimonial-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #042326;
+    margin: 0;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .leader-testimonial-card .leader-testimonial-text {
+    margin-top: 24px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D6266;
+  }
+  .mobile-leader-testimonial-section .mobile-leader-testimonial-content-div .master-class-slider-div .leader-testimonial-card .leader-testimonial-text .testimonial-name {
+    margin-top: 24px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: #042326;
+  }
+  .mobile-our-school-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-our-school-section .mobile-our-school-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-our-school-section .mobile-our-school-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-our-school-section .mobile-our-school-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-our-school-section .mobile-our-school-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-our-school-section .our-students-slider-div {
+    margin-bottom: 100px !important;
+  }
+  .mobile-our-school-section .our-students-slider-div .slick-track {
+    display: flex !important;
+  }
+  .mobile-our-school-section .our-students-slider-div .slick-slide {
+    height: inherit !important;
+  }
+  .mobile-our-school-section .our-students-slider-div .slick-slide img {
+    margin: 0 auto;
+  }
+  .mobile-our-school-section .our-students-slider-div ul.slick-dots {
+    bottom: -56px;
+    z-index: -1;
+  }
+  .mobile-our-school-section .our-students-slider-div .slide-arrow.prev-arrow {
+    position: absolute;
+    bottom: -75px;
+    left: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-our-school-section .our-students-slider-div .slide-arrow.next-arrow {
+    position: absolute;
+    bottom: -75px;
+    right: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  .mobile-our-school-section .our-school-logos {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 51px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .mobile-get-in-touch-section {
+    position: relative;
+    width: 100%;
+    color: #063B40;
+  }
+  .mobile-get-in-touch-section .mobile-get-in-touch-content-div {
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .mobile-get-in-touch-section .mobile-get-in-touch-content-div .mobile-section-title-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    left: 0;
+  }
+  .mobile-get-in-touch-section .mobile-get-in-touch-content-div .mobile-section-title-div .mobile-number-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #063B40;
+    padding: 12px 16px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mobile-get-in-touch-section .mobile-get-in-touch-content-div .mobile-section-title-div .mobile-section-title {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #063B40;
+  }
+  .mobile-get-in-touch-section .icon-text-div {
+    padding: 0 16px;
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .mobile-get-in-touch-section .icon-text-div .text-div {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #042326;
+  }
+  .mobile-get-in-touch-section .form-div {
+    padding: 32px 16px;
+  }
+  .mobile-get-in-touch-section .form-div #form2 {
+    position: relative;
+  }
+  .mobile-get-in-touch-section .form-div #form2 #email {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #888888;
+    width: 100%;
+    outline: none;
+    border: 1px solid #063B40;
+    border-radius: 4px;
+    padding: 14px 24px;
+    max-width: 289px;
+    background-color: transparent !important;
+  }
+  .mobile-get-in-touch-section .form-div #form2 .input-box {
+    position: relative;
+  }
+  .mobile-get-in-touch-section .form-div #text {
+    display: block;
+    color: #000;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    font-size: 12px;
+  }
+  .mobile-get-in-touch-section .form-div #form2.invalid .input-box::before {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/invalid.png);
+    background-size: cover;
+  }
+  .mobile-get-in-touch-section .form-div #form2.valid .input-box::before {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/valid.png);
+    background-size: cover;
+  }
+  .mobile-get-in-touch-section .form-div .form-input {
+    max-width: 94%;
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div {
+    margin-bottom: 24px;
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div input {
+    max-width: 700px;
+    width: 85%;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #063B40;
+    border-radius: 4px;
+    padding: 14px 24px;
+    outline: none;
+    color: #063B40;
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div input::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div input:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div textarea {
+    max-width: 700px;
+    width: 85%;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #063B40;
+    border-radius: 4px;
+    padding: 14px 24px;
+    color: #063B40;
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div textarea::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div textarea:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div textarea::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888888;
+    opacity: 1;
+    /* Firefox */
+  }
+  .mobile-get-in-touch-section .form-div .form-input .input-div .submit-btn {
+    background: #063B40;
+    border-radius: 4px;
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    width: 100%;
+    max-width: 750px;
+  }
+}
+@media (max-width: 475px) {
+  .video-background video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 375px !important;
+  }
+}
+.slide-left {
+  left: -100%;
+  -webkit-animation: slideLeft 1s ease forwards;
+          animation: slideLeft 1s ease forwards;
+  width: 0%;
+}
+
+@-webkit-keyframes slideLeft {
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes slideLeft {
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+.slide-right {
+  left: 0%;
+  -webkit-animation: slideRight 1s ease-in forwards;
+          animation: slideRight 1s ease-in forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  width: 100%;
+}
+
+@-webkit-keyframes slideRight {
+  100% {
+    left: -100%;
+    width: 0%;
+  }
+}
+
+@keyframes slideRight {
+  100% {
+    left: -100%;
+    width: 0%;
+  }
+}
+.slide-up {
+  -webkit-animation: slide-up 0.5s cubic-bezier(0.65, 0, 0.35, 1) both;
+          animation: slide-up 0.5s cubic-bezier(0.65, 0, 0.35, 1) both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    margin-bottom: 0px;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    margin-bottom: 76px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    margin-bottom: 0px;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    margin-bottom: 76px;
+    opacity: 1;
+  }
+}
+.slide-down {
+  -webkit-animation: slide-down 0.5s cubic-bezier(0.65, 0, 0.35, 1) both;
+          animation: slide-down 0.5s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@-webkit-keyframes slide-down {
+  0% {
+    transform: translateY(0px);
+    margin-bottom: 76px;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    margin-bottom: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(0px);
+    margin-bottom: 76px;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    margin-bottom: 0px;
+    opacity: 0;
+  }
+}
+.loader-ani {
+  -webkit-animation: loader-slide 2.5s forwards;
+          animation: loader-slide 2.5s forwards;
+  width: 100vw;
+}
+
+@-webkit-keyframes loader-slide {
+  0% {
+    width: 100vw;
+  }
+  80% {
+    width: 100vw;
+  }
+  100% {
+    width: 0vw;
+  }
+}
+
+@keyframes loader-slide {
+  0% {
+    width: 100vw;
+  }
+  80% {
+    width: 100vw;
+  }
+  100% {
+    width: 0vw;
+  }
+}
+#loader {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  z-index: 99999;
+  background: #063B40;
+  transform: 0.2s all ease-in;
+  font-family: "trans" !important;
+}
+#loader h2 {
+  position: relative;
+  font-size: 14vw;
+  color: #042326;
+  -webkit-text-stroke: 0vw white;
+  text-transform: uppercase;
+  font-family: "trans" !important;
+  letter-spacing: 10px;
+  -webkit-animation: growUp 2.5s forwards;
+          animation: growUp 2.5s forwards;
+}
+@-webkit-keyframes growUp {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 0;
+  }
+  80% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: -150%;
+    opacity: 0;
+  }
+}
+@keyframes growUp {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 0;
+  }
+  80% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: -150%;
+    opacity: 0;
+  }
+}
+#loader h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  -webkit-text-stroke: 0vw white;
+  overflow: hidden;
+  -webkit-animation: animate 2.5s linear forwards;
+          animation: animate 2.5s linear forwards;
+  font-family: "trans" !important;
+}
+@-webkit-keyframes animate {
+  0%, 10% {
+    width: 0;
+  }
+  40%, 70% {
+    width: 100%;
+  }
+}
+@keyframes animate {
+  0%, 10% {
+    width: 0;
+  }
+  40%, 70% {
+    width: 100%;
+  }
+}
+
+#loader p {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=index.css.map */
